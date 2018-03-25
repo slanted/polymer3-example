@@ -9,8 +9,8 @@ publish out the individual components or javascript modules to npm for consumpti
 You will need to install webpack and lerna in order to use this repo.
 
 ```
->npm install webpack@3.10.0
->npm install lerna@2.9.0
+>npm install -g webpack@3.10.0
+>npm install -g lerna@2.9.0
 ```
 
 ## Getting Started
