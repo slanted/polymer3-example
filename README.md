@@ -28,7 +28,7 @@ Once you've cloned it, do:
 >npm run serve
 ```
 
-It should not be running on localhost, the bundles and the build folder is at:
+It should now be running on localhost, the bundles and the build folder is at:
 /js/packages/dist/**
 
 ## Authors
