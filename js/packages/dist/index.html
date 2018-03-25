@@ -5,9 +5,9 @@
     <script type="text/javascript" src="custom-elements-es5-adapter.js"></script>
     <!--! do not remove -->
 
-    <script src="webcomponents-lite.js"></script>
-    <script src="vendor.bundle.js"></script>
-    <script src="components.bundle.js"></script>
+    <script src="webcomponents-lite.js"></script><!-- you can probably switch this out for the webcomponents-loader -->
+    <script src="vendor.bundle.js"></script><!-- this is where all of the third-party libraries go -->
+    <script src="components.bundle.js"></script><!-- this is our code, all the javascript and polymer elements -->
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -15,20 +15,27 @@
     <title>Webcomponents Polymer 3 Test</title>
 </head>
 <body>
-  <p>A simple button example.</p>
-  <p><ns-button>Click me!</ns-button></p>
+    <p>A simple button example.</p>
+    <p>
+        <ns-button>Click me!</ns-button>
+    </p>
 
-  <p><b>Some ns-alert examples</b></p>
-  <p>This one is a warning alert.</p>
-  <div style="width:500px;"><ns-alert type="warning" message="Warning Alert!!"></ns-alert></div>
-  <p>This one is a information alert, but it pulls its message from a utility function ns-test-util, a different npm module.</p>
-  <div style="width:500px;"><ns-alert type="information"></ns-alert></div>
+    <p><b>Some ns-alert examples</b></p>
+    <p>This one is a error alert. The only interesting thing is how it pulls in the image.</p>
+    <div style="width:500px;">
+        <ns-alert type="error" message="Error Alert!!"></ns-alert>
+    </div>
 
-    <p>A simple Product Component. It contains a ns-currency component from another npm module.</p>
-    <ns-product sku="01003610" country="US"></ns-product>
+    <p>This one is a information alert, but it pulls its message from a utility function ns-test-util, a different npm module.</p>
+    <div style="width:500px;">
+        <ns-alert type="information"></ns-alert>
+    </div>
+
+    <p>A simple Product Component. It contains a ns-currency component from another npm module.
+    <p>It also makes an ajax call using jquery which is a npm dependency.</p>
+    <ns-product sku="01003440" country="US"></ns-product>
 
     <p>Here is the ns-currency component by itself.</p>
     <ns-currency country="US" amount="200"></ns-currency>
-
 </body>
 </html>
