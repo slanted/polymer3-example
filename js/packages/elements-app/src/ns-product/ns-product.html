@@ -1,0 +1,30 @@
+<style>
+  .product {
+    display: inline-block;
+    border: 3px solid lightgray;
+    width: 310px;
+    background-color: white;
+    margin:5px;
+  }
+  .sku {
+    color:gray;
+  }
+  .title {
+    color: #008AB0;
+    font-family: Arial;
+  }
+
+  .description {
+    width: 100%;
+    font-size: x-small;
+  }
+</style>
+
+<div class="product">
+  <p align="center" class="title"><strong>{{title}}</strong></p>
+  <p align="center" class="sku">Sku {{sku}}</p>
+  <p align="center" class="description">{{description}}</p>
+  <p align="center"><img width="50" height="50" src="{{fullImage}}"/></p>
+  <p align="center" id="price"><ns-currency country="{{country}}" amount="{{price}}"></ns-currency></p>
+  <p align="center"><button on-click="addProduct" id="addToCart">Add to Cart</button></p>
+</div>
