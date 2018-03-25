@@ -1,7 +1,7 @@
 {
-  "name": "ns-test-account-elements",
+  "name": "ns-test-util-elements",
   "version": "0.0.1",
-  "main": "src/account-elements.js",
+  "main": "src/util-elements.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -10,6 +10,6 @@
     "@polymer/iron-input": "^3.0.0-pre.10",
     "@polymer/paper-button": "^3.0.0-pre.10",
     "@polymer/polymer": "^3.0.0-pre.10",
-    "ns-test-account": "0.0.1"
+    "ns-test-shop": "0.0.1"
   }
 }

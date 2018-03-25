@@ -1,9 +1,9 @@
 import {PolymerElement} from '@polymer/polymer/polymer-element.js';
 import template from './ns-alert.html';
 
-import emailIcon from '../assets/email.png';
+import {utilTest} from "ns-test-util"; // function imported from another module
+
 import infoIcon from '../assets/info-icon.svg';
-import shoppingBagIcon from '../assets/shopping-bag.svg';
 import successMessageIcon from '../assets/success-message-icon.svg';
 import warningIconDark from '../assets/warning-icon-dark.svg';
 import warningIcon from '../assets/warning-icon.svg';
@@ -35,6 +35,7 @@ class NsAlert extends PolymerElement {
                 break;
             case 'information':
                 iconDiv.style.backgroundImage = 'url(' + infoIcon + ')';
+                this.message = utilTest();
                 break;
         
             default:

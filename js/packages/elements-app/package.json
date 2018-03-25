@@ -1,7 +1,7 @@
 {
   "name": "ns-test-app-elements",
   "version": "0.0.1",
-  "description": "WebComponent based applications used in the Nu Skin ecosystem.",
+  "description": "Application elements - stuff to build apps",
   "main": "src/app-elements.js",
   "author": "",
   "license": "ISC",
@@ -21,7 +21,9 @@
     "@polymer/neon-animation": "^3.0.0-pre.10",
     "@polymer/paper-styles": "^3.0.0-pre.10",
     "@polymer/polymer": "^3.0.0-pre.10",
+    "jquery": "^3.3.1",
     "ns-test-account": "0.0.1",
-    "ns-test-util": "0.0.1"
+    "ns-test-util": "0.0.1",
+    "ns-test-util-elements":"0.0.1"
   }
 }

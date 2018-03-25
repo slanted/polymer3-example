@@ -45,7 +45,7 @@ module.exports = function(env) {
                 },
                 {
                     test: /\.js$/,
-                    exclude: /node_modules\/(?!(ns-app-elements|ns-shop-elements|ns-account-elements|ns-util-elements|ns-util|ns-account|ns-auth|ns-shop|ns-cart|ns-checkout-common|ns-checkout|ns-checkout-mobile|ns-agelocme-core|ns-agelocme-web|@polymer|@webcomponents)\/).*/,
+                    exclude: /node_modules\/(?!(ns-test-app-elements|ns-test-util-elements|ns-test-util|ns-test-account|ns-auth|ns-test-shop|@polymer|@webcomponents)\/).*/,
                     use: {
                         loader: 'babel-loader',
                         options: {
