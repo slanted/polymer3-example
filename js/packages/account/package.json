@@ -1,0 +1,19 @@
+{
+  "name": "ns-test-account",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "scripts": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "html-loader": "^0.4.5",
+    "watch": "^1.0.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.4"
+  },
+  "dependencies": {
+    "ns-test-util": "0.0.1"
+  }
+}

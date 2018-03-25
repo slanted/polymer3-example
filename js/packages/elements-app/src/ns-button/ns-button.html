@@ -1,0 +1,155 @@
+<style>
+    :host{
+        max-width: 100%;
+        margin: 0 auto;
+        font-family: "proxima-nova", "source-han-sans-japanese", "source-han-sans-korean", "source-han-sans-simplified-c", Helvetica, Arial, sans-serif;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    a{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    a[href=""]{ display: none; }
+    .button{
+        padding: 12px 20px;
+        transition: all .15s ease-in-out;
+        font-weight: 900;
+        font-size: 13px;
+        line-height: 17px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        text-decoration: none !important;
+        text-align: center;
+        box-shadow: 0 2px 4px 0 #a7a7a7;
+        cursor: pointer;
+        position: relative;
+        border: none;
+        color: #5e5e5e;
+        outline: 0 !important;
+    }
+    .button[disabled]{
+        cursor: not-allowed;
+    }
+    :host([align="left"]) .button{
+        margin: 0 auto 0 0;
+    }
+    :host([align="right"]) .button{
+        margin: 0 0 0 auto;
+    }
+    :host([type="link"]) .button{
+        color:#007298;
+        border:none;
+        background:none;
+        box-shadow:none;
+    }
+    /* Intentionally didn't set font color.  That is ONLY set by the page this button is on. */
+    :host([type="transparent"]) .button{
+        color: inherit;
+        border:none;
+        background:none;
+        box-shadow:none;
+    }
+    :host([shadowless]) .button{
+        box-shadow: none !important;
+    }
+    :host([borderless][type="tertiary"]) .button{
+        border: 1px solid #fff !important;
+    }
+    :host([fluid]), :host([fluid]) .button{
+        width: 100% !important;
+    }
+    :host([type="primary"]) .button, .button{
+        background-color: #008ab0;
+        color: #fff;
+    }
+    :host([type="primary"]) .button[disabled], .button[disabled]{
+        background-color: #ccdcdf;
+    }
+    :host([type="secondary"]) .button{
+        background-color: #fff;
+        color: #008ab0;
+        border: 1px solid #008ab0;
+        box-shadow: 0 2px 4px 0 #b9e1ea;
+    }
+    :host([type="secondary"]) .button[disabled]{
+        color: #ccdcdf;
+        border: 1px solid #ccdcdf;
+    }
+    :host([type="tertiary"]) .button{
+        background-color: #fff;
+        color: #5e5e5e;
+        border: 1px solid #5e5e5e;
+    }
+    :host([type="tertiary"]) .button[disabled]{
+        color: #c7c7c7;
+        border: 1px solid #c7c7c7;
+    }
+    :host([type="reverse"]) .button{
+        border: 1px solid white;
+        background-color: #007298;
+        color: white;
+        box-shadow: none;
+    }
+    :host([type="reverse-transparent"]) .button{
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        box-shadow: none;
+    }
+    :host([type="tertiary-link"]) .button{
+        border: none;
+        background-color: transparent;
+        color: #444444;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    @media (min-width: 768px) {
+        :host([type="primary"]) .button:hover, .button:hover{
+            background-color: #007298;
+        }
+        :host([type="primary"]) .button:active, .button:active{
+            background-color: #37b0c9;
+        }
+        :host([type="secondary"]) .button:hover{
+            color: #007298;
+            border: 1px solid #007298;
+        }
+        :host([type="secondary"]) .button:active{
+            color: #37b0c9;
+            border: 1px solid #37b0c9;
+        }
+        :host([type="reverse"]) .button:hover{
+            border: 1px solid #00627d;
+            background-color: #00627d;
+        }
+        :host([type="reverse-transparent"]) .button:hover{
+            border: 1px solid white;
+            background-color: white;
+            color: #444444;
+        }
+        :host([type="tertiary-link"]) .button:hover {
+            border: none;
+            background-color: transparent;
+        }
+    }
+    /* TODO Check into why this is on a random media query */
+    @media (max-width: 500px) {
+        :host([type="primary"]) .button, .button{
+            width:100%;
+            display: block;
+        }
+    }
+
+</style>
+
+<button class="button" disabled$="{{disabled}}">
+    <a href$="[[href]]"></a>
+    <slot id="buttonContent"></slot>
+</button>

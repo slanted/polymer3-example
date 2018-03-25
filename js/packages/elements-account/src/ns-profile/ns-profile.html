@@ -1,0 +1,169 @@
+<style>
+    :host{
+        height: inherit;
+        -webkit-font-smoothing: antialiased;
+    }
+    #profile-container {
+        height: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 14px;
+        line-height: 14px;
+        text-decoration: none;
+        color: #008AB0;
+        cursor: pointer;
+        position: relative;
+    }
+    #profile-container::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        border-bottom: 0.5rem solid rgba(0, 138, 176, 0.97);
+        border-left: 0.5rem solid transparent;
+        border-right: 0.5rem solid transparent;
+        transition: all .15s ease-in-out;
+    }
+    #profile-container.inactive::after{
+        visibility: hidden;
+        opacity: 0;
+    }
+    #profile-container.active::after{
+        visibility: visible;
+        opacity: 1;
+    }
+    .profile-image{
+        height: auto;
+        width: auto;
+        max-width: 33px;
+    }
+    .hidden--tablet-down{
+        display: none;
+    }
+    .dropdown{
+        transition: all .15s ease-in-out;
+        display: inline-block;
+        position: absolute;
+        right: -1px;
+        width: 385px;
+        max-width: calc(100% + 2px);
+        background-color: rgba(0, 138, 176, 0.97);
+        color: white;
+        z-index: 9500;
+    }
+    .dropdown.inactive{
+        visibility: hidden;
+        opacity: 0;
+    }
+    .dropdown.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    .dropdown ul li:last-of-type{
+        background-color: #037EA5;
+        width: 100%;
+        padding: 15px 0;
+    }
+    .dropdown ul{
+        list-style: none;
+        padding: 0;
+        margin: 40px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .dropdown li{
+        margin-bottom: 30px;
+    }
+    .dropdown li:first-of-type{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    .dropdown li:last-of-type{
+        margin-bottom: 0;
+    }
+    .dropdown li:last-of-type a{
+        text-decoration: none !important;
+        font-size: 14px;
+        line-height: 14px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    .dropdown li.account-settings{
+        background-color: #037EA5;
+        border: 1px solid #8BC9DB;
+        width: calc(100% - 60px);
+        padding: 15px 0;
+    }
+    .dropdown a{
+        text-decoration: none;
+        color: white !important;
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .dropdown li.account-settings a{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .dropdown a:hover{
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    .dropdown .image-wrap{
+        border-radius: 50%;
+        overflow: hidden;
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        position: absolute;
+        left: -85px;
+    }
+    .dropdown .image-wrap img{
+        position: relative;
+        left: -5px;
+    }
+    :host([expandbreakpoint="none"]) .my-account{
+        display: none !important;
+    }
+    @media (max-width: 767px) {
+        :host([expandbreakpoint="tablet"]) .my-account{ display: none !important; }
+    }
+    @media (max-width: 991px) {
+        :host([expandbreakpoint="desktop"]) .my-account{ display: none !important; }
+    }
+
+</style>
+<template is="dom-if" if="{{isLoggedIn}}">
+    <div id="profile-container" class$="{{active}}" on-click="toggleDropdown">
+        <span><img class="profile-image" src="{{user.accImage}}" alt=""></span>
+        <span class="my-account">{{myAccount}}</span>
+    </div>
+    <div class$="dropdown {{active}}">
+        <ul>
+            <li>
+                <div class="image-wrap"><img src="{{user.accImage}}" alt=""></div> {{user.firstName}} {{user.lastName}}
+            </li>
+            <li class="account-settings">
+                <a href="{{accountSettings.href}}">{{accountSettings.name}}</a>
+            </li>
+            <template is="dom-repeat" items="{{profileMenu}}">
+                <li hidden$="[[!hasAccountLevel(user.accountLevel, item)]]"><a href$="item.href" target="_self">{{item.name}}</a></li>
+            </template>
+            <li>
+                <a href="{{logout.href}}" class="sign-out" on-click="signOut">{{logout.name}}</a>
+            </li>
+        </ul>
+    </div>
+</template>
+<template is="dom-if" if="{{!isLoggedIn}}">
+    <div id="profile-container" class$="{{active}}" on-click="signIn">
+        <span class="sign-in">{{signin.name}}</span>
+    </div>
+</template>

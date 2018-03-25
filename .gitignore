@@ -1,0 +1,14 @@
+*.iml
+.idea/*
+**/.DS_Store
+web/.DS_Store
+web/components
+yarn.lock
+package-lock.json
+yarn-error.log
+lerna-debug.log
+node_modules/
+**/build/
+**/dist/
+.vscode
+**/*/npm-debug.log

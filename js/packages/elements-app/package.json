@@ -1,0 +1,27 @@
+{
+  "name": "ns-test-app-elements",
+  "version": "0.0.1",
+  "description": "WebComponent based applications used in the Nu Skin ecosystem.",
+  "main": "src/app-elements.js",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "html-loader": "^0.4.5",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.4"
+  },
+  "dependencies": {
+    "@polymer/iron-a11y-keys-behavior": "^3.0.0-pre.10",
+    "@polymer/iron-fit-behavior": "^3.0.0-pre.10",
+    "@polymer/iron-resizable-behavior": "^3.0.0-pre.10",
+    "@polymer/neon-animation": "^3.0.0-pre.10",
+    "@polymer/paper-styles": "^3.0.0-pre.10",
+    "@polymer/polymer": "^3.0.0-pre.10",
+    "ns-test-account": "0.0.1",
+    "ns-test-util": "0.0.1"
+  }
+}

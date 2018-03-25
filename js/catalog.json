@@ -1,0 +1,180 @@
+{
+  "packages": [
+    {
+      "name":"ns-account-elements",
+      "title":"Account Elements",
+      "color":"#B57280",
+      "symbol":"Ac",
+      "tagline": "Account Elements",
+      "version": "1.0.0",
+      "description": "Elements for NuSkin accounts.",
+      "directory": "elements-account",
+      "elements": [
+        
+      ],
+      "developing": [
+        {
+          "element": "ns-checkbox",
+          "by": "Geoff Sagers",
+          "started": "1/1/2017"
+        },
+        {
+          "element": "ns-radio",
+          "by": "Geoff Sagers",
+          "started": "1/1/2017"
+        }
+      ],
+      "guides": []
+    },
+    {
+      "name":"ns-application-elements",
+      "title":"Application Elements",
+      "color":"#1180A8",
+      "symbol":"Ap",
+      "tagline": "Application Elements",
+      "version": "1.0.0",
+      "description": "Application level elements for NuSkin.",
+      "directory": "elements-app",
+      "elements": [
+        "ns-button",
+        "ns-footer",
+        "ns-footer-details",
+        "ns-footer-nav",
+        "ns-header",
+        "ns-header-demo",
+        "ns-iron-nav",
+        "ns-iron-profile",
+        "ns-logo",
+        "ns-nav",
+        "ns-profile",
+        "ns-region",
+        "ns-region-selection",
+        "ns-social-icons"
+      ],
+      "developing": [
+        {
+
+        }
+      ],
+      "guides": []
+    },
+    {
+      "name":"ns-shop-elements",
+      "title":"Shop Elements",
+      "color":"#FFFDDD",
+      "symbol":"Sh",
+      "tagline": "Shop Elements",
+      "version": "1.0.0",
+      "description": "Shopping elements for NuSkin.",
+      "directory": "elements-shop",
+      "elements": [
+        "ns-add-to-bag",
+        "ns-product",
+        "ns-product-detail",
+        "ns-product-group",
+        "ns-product-overlay",
+        "ns-product-popup",
+        "ns-product-small",
+        "ns-stripe-donation",
+        "ns-variant-details",
+        "ns-waiting-room",
+        "ns-waiting-room-sog"
+      ],
+      "developing": [
+        {
+
+        }
+      ],
+      "guides": []
+    },
+    {
+      "name":"ns-util-elements",
+      "title":"Utility Elements",
+      "color":"#B57280",
+      "symbol":"Ut",
+      "tagline": "Utility Elements",
+      "version": "1.0.0",
+      "description": "Elements for general utility at NuSkin.",
+      "directory": "elements-util",
+      "elements": [
+        "ns-accordion",
+        "ns-bind-html",
+        "ns-button",
+        "ns-container",
+        "ns-currency",
+        "ns-demo-controls",
+        "ns-link-list",
+        "ns-notice",
+        "ns-number-increment",
+        "ns-phone",
+        "ns-swatch"
+      ],
+      "developing": [
+        {
+
+        }
+      ],
+      "guides": []
+    }
+  ],
+  "guides": [
+    {
+      "title": "Flexbox layout with iron-flex-layout",
+      "summary": "Simple flexbox layout",
+      "tags": [
+        "beginner"
+      ],
+      "elements": [
+        "iron-flex-layout"
+      ],
+      "updated": "2015-05-03T00:00:00.000Z",
+      "name": "flex-layout"
+    },
+    {
+      "title": "Responsive Material Design layouts",
+      "summary": "How to create responsive Material Design layouts with Paper and Iron elements.",
+      "tags": [
+        "layout"
+      ],
+      "elements": [
+        "paper-header-panel",
+        "paper-toolbar",
+        "paper-drawer-panel",
+        "paper-icon-button",
+        "paper-tabs",
+        "paper-tab",
+        "paper-drawer-panel",
+        "iron-icons",
+        "iron-flex-layout"
+      ],
+      "updated": "2015-07-23T00:00:00.000Z",
+      "name": "responsive-material-design-layouts"
+    },
+    {
+      "title": "Using Elements",
+      "summary": "Learn how to install and use Polymer Elements in your own projects.",
+      "tags": [
+        "beginner"
+      ],
+      "elements": [
+        "paper-checkbox"
+      ],
+      "updated": "2015-05-03T00:00:00.000Z",
+      "name": "using-elements"
+    },
+    {
+      "title": "neon-animation",
+      "summary": "A short guide to neon-animation and neon-animated-pages",
+      "tags": [
+        "animation",
+        "intermediate"
+      ],
+      "elements": [
+        "neon-animation",
+        "neon-animated-pages"
+      ],
+      "updated": "2015-05-26T00:00:00.000Z",
+      "name": "using-neon-animations"
+    }
+  ]
+}

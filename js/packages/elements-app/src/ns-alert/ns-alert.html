@@ -1,0 +1,195 @@
+<style>
+    :host{ margin: 0 auto; }
+    *{ box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+    .ns-alert-wrap {
+        width: 100%;
+        padding: 20px 0;
+        height: auto;
+        color: white;
+        transition: all .25s ease-in-out;
+    }
+    .ns-alert-wrap.active{
+        visibility: visible;
+        opacity: 1;
+        min-height: 75px;
+        max-height: 300px;
+    }
+    .ns-alert-wrap.inactive{
+        visibility: hidden;
+        opacity: 0;
+        min-height: 0;
+        max-height: 0;
+        padding: 0;
+    }
+    .ns-alert-wrap *{
+        transition: all .25s ease-in-out;
+    }
+    .ns-alert-wrap.inactive *{
+        visibility: hidden;
+        opacity: 0;
+    }
+    :host([type="error"]) .ns-alert-wrap{
+        background: #c23934;
+        background: linear-gradient(111deg, #c23934, #86211e);
+        background: -webkit-linear-gradient(left, #c23934, #86211e);
+        background: -o-linear-gradient(111deg, #c23934, #86211e);
+        background: -moz-linear-gradient(111deg, #c23934, #86211e);
+        background: linear-gradient(111deg, #c23934, #86211e);
+        color: #fff;
+    }
+    :host([type="error"]) .icon{
+        background-image: url("../assets/email.png");
+    }
+    :host([type="error"]) .message-wrap > *{
+        color: #fff;
+    }
+    :host([type="warning"]) .ns-alert-wrap{
+        background: #fad961;
+        background: linear-gradient(111deg, #fad961, #f76b16);
+        background: -webkit-linear-gradient(left, #fad961, #f76b16);
+        background: -o-linear-gradient(111deg, #fad961, #f76b16);
+        background: -moz-linear-gradient(111deg, #fad961, #f76b16);
+        background: linear-gradient(111deg, #fad961, #f76b16);
+        color: #fff;
+    }
+    :host([type="warning"]) .close-alert{
+        color: #444;
+    }
+    :host([type="warning"]) .icon{
+        background-image: url("../assets/warning-icon.svg");
+    }
+    :host([type="warning"]) .message-wrap > *{
+        color: #fff;
+    }
+    :host([type="success"]) .ns-alert-wrap{
+        background: #7eca7b;
+        background: linear-gradient(111deg, #7eca7b, #548952);
+        background: -webkit-linear-gradient(left, #7eca7b, #548952);
+        background: -o-linear-gradient(111deg, #7eca7b, #548952);
+        background: -moz-linear-gradient(111deg, #7eca7b, #548952);
+        background: linear-gradient(111deg, #7eca7b, #548952);
+        color: #fff;
+    }
+    :host([type="success"]) .icon{
+        background-image: url("../assets/success-message-icon.svg");
+    }
+    :host([type="success"]) .message-wrap > *{
+        color: #fff;
+    }
+    :host([type="information"]) .ns-alert-wrap{
+        background: #1d7398;
+        background: linear-gradient(111deg, #1d7398, #0a4b5d);
+        background: -webkit-linear-gradient(left, #1d7398, #0a4b5d);
+        background: -o-linear-gradient(111deg, #1d7398, #0a4b5d);
+        background: -moz-linear-gradient(111deg, #1d7398, #0a4b5d);
+        background: linear-gradient(111deg, #1d7398, #0a4b5d);
+        color: #fff;
+    }
+    :host([type="information"]) .icon{
+        background-image: url("../assets/info-icon.svg");
+    }
+    :host([type="information"]) .message-wrap > *{
+        color: #fff;
+    }
+    :host([type="default"]) .ns-alert-wrap,
+    :host(:not([type])) .ns-alert-wrap{
+        background-color: #f7f7f7;
+        color: #444;
+        border: 2px solid #ddd;
+    }
+    :host([type="default"]) .icon,
+    :host(:not([type])) .icon{
+        background-image: url("../assets/warning-icon-dark.svg");
+    }
+    :host([type="white"]) .ns-alert-wrap{
+        background-color: #fff;
+        color: #444;
+    }
+    .icon{
+        height: 30px;
+        width: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-right: 30px;
+        display: none;
+    }
+    :host(:not([no-icon])) .icon, :host([no-icon=false]) .icon{
+        display: inline-block;
+    }
+    .close-alert{
+        cursor: pointer;
+        display: none;
+    }
+    :host(:not([no-close])) .close-alert, :host([no-close=false]) .close-alert{
+        display: inline-block;
+    }
+    .message-wrap{
+        flex-grow: 1;
+    }
+    .message {
+        margin-top: 0;
+    }
+    .developer-info{
+        font-size: 10px;
+        line-height: 13px;
+        margin-top: 10px;
+    }
+    .message-wrap > *:empty{
+        display: none !important;
+    }
+    h4, p{
+        margin: 0;
+    }
+    p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    h4{
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .container{
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        position: relative;
+    }
+    @media (min-width: 768px) {
+        .container{
+            width: 750px;
+        }
+    }
+    @media (min-width: 992px) {
+        .container{
+            width: 970px;
+        }
+    }
+    @media (min-width: 1200px) {
+        .container{
+            width: 1170px;
+        }
+    }
+</style>
+
+<div class$="ns-alert-wrap {{active}}">
+    <div class="container">
+        <div class="icon-wrap">
+            <div id="iconDiv" class="icon"></div>
+        </div>
+        <div class="message-wrap">
+            <h4 class="header" inner-h-t-m-l="{{header}}"></h4>
+            <p class="message" inner-h-t-m-l="{{message}}"></p>
+            <p class="developer-info" inner-h-t-m-l="{{developerInfo}}"></p>
+        </div>
+        <div class="close-alert" on-click="toggle">×</div>
+    </div>
+</div>

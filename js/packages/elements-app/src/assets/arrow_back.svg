@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="28px" viewBox="0 0 14 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Arrow (Select) Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M55.829632,48.117696 C55.8400039,48.4418855 55.7328224,48.7706642 55.503244,49.034764 L45.0062995,61.1101173 C44.523191,61.6658701 43.6810275,61.7247599 43.1252747,61.2416514 C42.5695219,60.7585428 42.5106321,59.9163793 42.9937406,59.3606265 L52.767071,48.117696 L42.9937406,36.8747654 C42.5106321,36.3190126 42.5695219,35.4768492 43.1252747,34.9937406 C43.6810275,34.5106321 44.523191,34.5695219 45.0062995,35.1252747 L55.503244,47.200628 C55.7328224,47.4647278 55.8400039,47.7935065 55.829632,48.117696 Z" id="path-1"></path>
+    </defs>
+    <g id="Tablet-Profile-Modal-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-138.000000, -444.000000)">
+        <g id="Group-19" transform="translate(98.000000, 269.000000)">
+            <g id="Icon/Arrow-(Select)" transform="translate(48.000000, 189.000000) scale(-1, 1) translate(-48.000000, -189.000000) translate(0.000000, 141.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Arrow"></g>
+                <g id="UI/Color/Flat/Gandalf" mask="url(#mask-2)" fill="#A7A7A7" fill-rule="evenodd">
+                    <rect id="Base" x="0" y="0" width="96" height="96"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

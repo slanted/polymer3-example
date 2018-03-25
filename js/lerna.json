@@ -1,0 +1,21 @@
+{
+  "lerna": "2.0.0",
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "commands": {
+    "exec": {
+      "ignore": [
+        "ns-agelocme-mobile"
+      ]
+    },
+    "publish": {
+      "ignore": [
+        "ns-agelocme-mobile"
+      ]
+    }
+  },
+  "version": "2.22.0-SNAPSHOT.2455"
+}

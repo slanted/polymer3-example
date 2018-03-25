@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="15px" viewBox="0 0 24 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Search-1366-Results-page-long-cards" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-355.000000, -877.000000)">
+        <g id="Filter-Icon" transform="translate(356.000000, 874.000000)" stroke="#332F20">
+            <g id="ic-menu" fill-rule="evenodd" transform="translate(0.000000, 6.000000)" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M0,1 L3.53553391,1" id="Stroke-120"></path>
+                <path d="M10,1 L21.5108644,1" id="Stroke-120-Copy"></path>
+            </g>
+            <g id="ic-menu-copy" fill-rule="evenodd" transform="translate(11.000000, 14.500000) scale(-1, 1) translate(-11.000000, -14.500000) translate(0.000000, 13.000000)" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M0,1 L2.54950976,1" id="Stroke-120"></path>
+                <path d="M9.48959726,1 L21.5108644,1" id="Stroke-120-Copy"></path>
+            </g>
+            <circle id="Oval-4" cx="7" cy="7" r="3"></circle>
+            <circle id="Oval-4-Copy" cx="16" cy="14" r="3"></circle>
+        </g>
+    </g>
+</svg>
