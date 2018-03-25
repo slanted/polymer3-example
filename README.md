@@ -4,6 +4,8 @@ This is an example repo that uses the latest version of polymer 3. There are sev
 Some other technologies used are webpack, lerna, and yarn workspaces to keep it a monorepo, but still allows you to
 publish out the individual components or javascript modules to npm for consumption.
 
+If you want a more detailed explanation you can read about it here: https://medium.com/@slantedwalker/our-use-of-polymer-3-so-far-f2439cc89135
+
 ### Prerequisites
 
 You will need to install webpack and lerna in order to use this repo.
