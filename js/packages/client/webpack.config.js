@@ -85,26 +85,6 @@ module.exports = function(env) {
             }),
             new CopyWebpackPlugin([
                 {
-                    from: '../../node_modules/@webcomponents/webcomponentsjs/webcomponents-hi.js',
-                    to: path.resolve(__dirname + '/../', 'dist')
-                },
-                {
-                    from: '../../node_modules/@webcomponents/webcomponentsjs/webcomponents-hi-sd-ce.js',
-                    to: path.resolve(__dirname + '/../', 'dist')
-                },
-                {
-                    from: '../../node_modules/@webcomponents/webcomponentsjs/webcomponents-hi-ce.js',
-                    to: path.resolve(__dirname + '/../', 'dist')
-                },
-                {
-                    from: '../../node_modules/@webcomponents/webcomponentsjs/webcomponents-hi-sd.js',
-                    to: path.resolve(__dirname + '/../', 'dist')
-                },
-                {
-                    from: '../../node_modules/@webcomponents/webcomponentsjs/webcomponents-sd-ce.js',
-                    to: path.resolve(__dirname + '/../', 'dist')
-                },
-                {
                     from: '../../node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js',
                     to: path.resolve(__dirname + '/../', 'dist')
                 },
@@ -115,10 +95,6 @@ module.exports = function(env) {
                 {
                     from: '../../node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js',
                     to: path.resolve(__dirname + '/../', 'dist')
-                },
-                {
-                    from: path.resolve(__dirname, '../../catalog.json'),
-                    to: path.resolve(__dirname, '../dist')
                 }
             ])
         ]
